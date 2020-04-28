@@ -13,9 +13,7 @@ class Navbar extends Component {
              <img src={process.env.PUBLIC_URL + '/images/Speaker08.png'}
                alt="OnLive"
                style={{
-                width: "250px",
-                position: "absolute",
-                top: "-10px"
+                width: "150px"
                 
               }}
              />

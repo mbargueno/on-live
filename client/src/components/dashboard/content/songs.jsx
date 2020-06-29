@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/authActions";
 import { loginUser, setCurrentUser } from "../../../actions/authActions";
 
-class Events extends Component {
+class Songs extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class Events extends Component {
 
   render() {
     
-    return (<p>This will be the events news</p>)
+    return (<p>This will be Songs news</p>)
   }
 
 }
@@ -28,4 +28,4 @@ const mapStateToProps = (state) => ({
     errors: state.errors,
   });
   
-  export default connect(mapStateToProps, { loginUser })(Events);
+  export default connect(mapStateToProps)(Songs);

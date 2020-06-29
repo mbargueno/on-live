@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import axios from "axios";
 import Login from "components/auth/Login";
-import Topmenu from "components/dashboard/Topmenu";
-import Header from "components/dashboard/header";
-import Content from "components/dashboard/content/content";
+import Topmenu from "components/dashboard/Topmenu.jsx";
+import Header from "components/dashboard/header.jsx";
+import Content from "components/dashboard/content/content.jsx";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -113,4 +113,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-export default connect(mapStateToProps, { logoutUser })(Dashboard);
+export default connect(mapStateToProps)(Dashboard);

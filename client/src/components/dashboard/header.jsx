@@ -6,7 +6,7 @@ import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import axios from "axios";
 import Login from "components/auth/Login";
-import Modaledimg from "components/dashboard/modaledimg";
+import Modaledimg from "components/dashboard/modaledimg.jsx";
 
 
 class Header extends Component {

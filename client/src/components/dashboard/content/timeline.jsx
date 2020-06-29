@@ -11,12 +11,11 @@ class Timeline extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data:[],
+      data: [],
       newData: [],
       user: this.props.auth.user,
     };
   }
-
 
   componentDidMount() {
     const user = this.props.auth.user;
@@ -33,7 +32,6 @@ class Timeline extends Component {
             let getuserurl = "/api/users/user/" + item.author;
 
             axios.get(getuserurl).then((user) => {
-              
               var r = item;
               r.username = user.data.name;
               r.profile_pic = user.data.profile_pic;
@@ -64,42 +62,36 @@ class Timeline extends Component {
               r.profile_pic = user.data.profile_pic;
               //Array.prototype.push.apply(newData, r);
               newData.push(r);
-              
             });
           });
-          
+
           this.setState({ data: timeline });
           this.setState({ newData: newData });
-        
         })
         .catch((err) => {
           console.log(err);
         });
     }
-
-    
   }
 
-  
-
   render() {
-    return (
-    this.state.data.map(function(item, key){
-      
+    return this.state.data.map(function (item, key) {
       return (
-        <div key = {key}>
-            
-            
-            <p>{item.author}</p>
-            <p>{item.date}</p>
+        <div className="post-container" key={key}>
+          <div className="profile-pic-timeline">
+            <img src={item.profile_pic} alt={item.username} title={item.username} />
+          </div>
+          <div className="post-header">
+            <p className="post-author">{item.username}</p>
+            <p className="post-date">{item.date}</p>
+          </div>
+          <div className="post-content">
             <p>{item.text}</p>
-            <hr/>
+          </div>
         </div>
-      )
-    })
-    )
-    
-}
+      );
+    });
+  }
 }
 
 const mapStateToProps = (state) => ({
@@ -107,4 +99,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors,
 });
 
-export default connect(mapStateToProps, { loginUser })(Timeline);
+export default connect(mapStateToProps)(Timeline);

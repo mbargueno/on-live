@@ -6,10 +6,10 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/authActions";
 import { loginUser, setCurrentUser } from "../../../actions/authActions";
-import Timeline from "components/dashboard/content/timeline";
-import Songs from "components/dashboard/content/songs";
-import Bands from "components/dashboard/content/bands";
-import Events from "components/dashboard/content/events";
+import Timeline from "components/dashboard/content/timeline.jsx";
+import Songs from "components/dashboard/content/songs.jsx";
+import Bands from "components/dashboard/content/bands.jsx";
+import Events from "components/dashboard/content/events.jsx";
 
 class Content extends Component {
   constructor(props) {
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => ({
     errors: state.errors,
   });
   
-  export default connect(mapStateToProps, { loginUser })(Content);
+  export default connect(mapStateToProps)(Content);

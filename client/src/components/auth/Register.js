@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import Footerlanding from "../layout/Footerlanding";
+import Footerlanding from "../layout/Footerlanding.jsx";
 
 class Register extends Component {
   constructor() {

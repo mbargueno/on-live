@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Footerlanding from "../layout/Footerlanding";
+import Footerlanding from "./Footerlanding.jsx";
 
 class Landing extends Component {
   render() {

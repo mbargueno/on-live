@@ -119,4 +119,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors,
 });
 
-export default connect(mapStateToProps, { loginUser })(Modaleddesc);
+export default connect(mapStateToProps)(Modaleddesc);

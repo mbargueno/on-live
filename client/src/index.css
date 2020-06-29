@@ -1,32 +1,35 @@
 @font-face {
-  font-family: 'walkway_boldregular';
-  src: url('./fonts/Walkway_Bold-webfont.woff') format('woff');
+  font-family: "walkway_boldregular";
+  src: url("./fonts/Walkway_Bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
 
+.register-txt a {
+  color: #ff0000 !important;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'walkway_boldregular';
-  
+  font-family: "walkway_boldregular";
+  background-color: #000;
 }
 
 nav {
-  background-color: #000;
-  overflow:hidden;
+  border-bottom: 3px solid #ff0000;
+  overflow: hidden;
 }
 
 nav ul a {
-  font-family: 'walkway_boldregular';
+  font-family: "walkway_boldregular";
   padding: 10px 30px;
 }
 
 nav a {
-  color:#000;
-  font-weight:bold;
-  font-size:60px;
+  color: #000;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 nav .nav-wrapper {
@@ -35,48 +38,217 @@ nav .nav-wrapper {
 }
 
 .brand-logo {
-  font-family: 'walkway_boldregular';
+  font-family: "walkway_boldregular";
 }
 
 .landing-main {
   background-image: url("/images/main-background.jpg");
-  background-size:cover;
+  background-size: cover;
   background-position: center center;
 }
 
 .register-main {
   background-image: url("/images/register-background.jpg");
-  background-color:#000;
-  background-size:cover;
+  background-color: #000;
+  background-size: cover;
   background-position: center center;
 }
 
-.landing-main h1, .landing-main h2 {
-  color:#fff;
-  font-weight:bold;
-} 
+.login-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 48% !important;
+  float: right !important;
+  padding: 20px !important;
+  text-align: center;
+  border-radius: 9px;
+  margin-top: 100px;
+}
+
+.login-form .btn-flat {
+  color: #ff0000;
+}
+
+.imglogin {
+  width: 30%;
+  position: absolute;
+  max-width: 600px;
+}
+
+.landing-main h1,
+.landing-main h2 {
+  color: #fff;
+  font-weight: bold;
+}
 
 .landing-main h2 {
   font-size: 2rem;
 }
 
-.joinus-landing{
-  font-size:3.56rem;
-  
+.joinus-landing {
+  font-size: 3.56rem;
 }
 
 .register-form {
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   margin-top: 50px;
   border-radius: 5px;
 }
 
 .page-footer .footer-copyright {
-  background-color: rgba(181,181,181,0.08);
+  background-color: rgba(181, 181, 181, 0.08);
 }
 
 .page-footer {
   padding-top: 20px;
   color: #fff;
   background-color: #000;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #ff0000 !important;
+  -webkit-box-shadow: 0 1px 0 0 #ff0000 !important;
+  box-shadow: 0 1px 0 0 #ff0000 !important;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="url"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="time"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="date"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly])
+  + label,
+input[type="tel"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="search"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #ff0000 !important;
+}
+.red.accent-3 {
+  background-color: #ff0000 !important;
+}
+
+.profile-main .container {
+  background-color: #fff;
+}
+
+.profile-header-cont {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  position: relative;
+  min-height: 200px;
+  border-bottom: 3px solid #ff0000;
+}
+
+.profile-avatar {
+  width: 150px;
+  position: absolute;
+  top: 125px;
+  left: 0px;
+  right:0px;
+  margin:0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 150px;
+  border: 3px solid #ff0000;
+}
+
+.profile-avatar img {
+  width: 100%;
+  
+}
+
+.profile-name {
+  text-align: center;
+  margin-top: 85px;
+  text-transform: uppercase;
+}
+
+.profile-name h4 {
+  font-weight:bold;
+  font-size:25px;
+}
+
+.profile-name h5 {
+  font-weight:bold;
+  font-size:16px;
+}
+.dashboard-role-icon {
+  position: relative;
+  top: 6px;
+  right: 6px;
+}
+
+
+.nav-content {
+  width:100%;
+  text-align:center;
+}
+
+.nav-content .tabs.tabs-transparent .tab a {
+  color:#000;
+}
+
+.nav-content .tabs.tabs-transparent .tab a:hover, .nav-content .tab a:active {
+  color:#ff0000;
+}
+
+
+.tabs .tab a:focus, .tabs .tab a:focus.active, .tabs .tab a.active {
+  background-color: transparent!important;
+  border-bottom: 2px solid #ff0000;
+  color:#ff0000!important;
+}
+
+.edit-dash-bckgr-cont {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+
+}
+
+.edit-dash-bckgr-cont .btn:hover, .edit-dash-bckgr-cont .btn-large:hover, .edit-dash-bckgr-cont .btn-small:hover {
+  background-color: #9c9c9c;
+}
+
+.edit-dash-bckgr-cont .btn {
+  background-color: #fdfdfd;
+  color:#000;
+}
+
+.edit-dash-bckgr-cont .btn i {
+  font-size: 15px;
+  margin: 0px 5px 0px 0px;
+
+}
+
+.top-nav-profile {
+  width: 50px;
+  height: 50px;
+  margin-top: 8px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+}
+
+nav ul a:hover {
+  background-color: #fff !important;
+}
+
+.top-nav-profile img {
+  width:100%;
 }

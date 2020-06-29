@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Footerlanding extends Component {
   render() {
     return (
-        <footer class="page-footer">
+        <footer class="page-footer black">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
@@ -22,7 +22,7 @@ class Footerlanding extends Component {
             </div>
           </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright grey darken-4">
           <div class="container">
           © 2014 Copyright Text
           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
